@@ -5,14 +5,23 @@ html { box-sizing: border-box; }
 
 /* -------------------------------------------------- */
 
+
+@font-face {
+    font-family: Raleway;
+    src: url('Raleway/Raleway-VariableFont_wght.ttf');
+    }
+
+
 body {
     margin: 0;
     font-family: 'Source Sans Pro', sans-serif;
-}
+    color: white;
+    }
 
 h2 {
-    margin: 0;
-    font-family: 'Raleway', sans-serif;
+    margin: 0px;
+    font-family: 'Raleway'
+    
 }
 
 .paticka {
@@ -25,6 +34,162 @@ h2 {
     color: silver;
 }
 
+
+.doporucujeme { 
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    margin: 20px;
+}
+
+.hlavni-recept {
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.400), rgba(0, 0, 0, 0.200)),
+    url('images/burger.jpg');
+    background-repeat: no-repeat;
+    background-position: 0%;
+    background-size: cover;
+    border: white solid 1px;
+    justify-content: space-between;
+    min-height: 200px; 
+    font-size: 1.75rem; 
+}
+
+.hlavni-recept .recept-nazev{
+    font-size: 1.75rem;
+}
+.recept-meta{
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    font-weight: 400;
+    padding: 0.5rem;
+}    
+
+.recept-kategorie, .recept-komentare {
+    display: inline-block;
+}
+
+.recept-nazev {
+    font-weight: 800;
+    font-size: 1.2rem;
+    padding: 0.5rem;
+}
+
+.recept{
+    display: flex;
+    flex-direction: column;
+    background-repeat: no-repeat;
+    background-position: 0%;
+    background-size: cover;
+    border: white solid 1px;
+    min-height: 90px;     
+    justify-content: space-between;
+
+}
+
+.recept2 {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.400), rgba(0, 0, 0, 0.200)),
+    url('images/sushi.jpg');
+}
+
+.recept3{
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.400), rgba(0, 0, 0, 0.200)),
+    url('images/rajcata.jpg');
+}
+
+.recept4{
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.400), rgba(0, 0, 0, 0.200)),
+    url('images/kure.jpg');
+}
+
+.recept5{
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.400), rgba(0, 0, 0, 0.200)),
+    url('images/grilovani.jpg');
+}
+
+
+/* jo AHA!!! Tohle je to MOBILE FIRST? Že na to nedělám MQ, ale rovnou to píšu nahoru do CSS? 
+
+@media screen and (min-width: 360px){
+    .doporucujeme {
+        flex-direction: column;
+    }
+    .hlavni-recept {
+        min-height: 200px;
+        font-size: 1.75rem; /*nefunguje kontejner
+    }
+    .recept {
+        min-height: 90px;
+    }
+    .recept-meta {
+        padding: 0.5rem;
+    }
+    .recept-nazev {
+        font-size: 1.2rem;
+        padding: 0.5rem;
+    }
+} 
+
+*/
+
+@media screen and (min-width: 480px) {
+    .doporucujeme {
+        flex-direction: row;  
+        flex-wrap: wrap;
+    }
+    .sloupec {
+        flex-basis: 50%;
+        flex-wrap: wrap;
+    }    
+    .hlavni-recept {
+        min-height: 250px;
+        flex-basis: 100%;
+    }
+    .hlavni-recept .recept-nazev{
+        font-size: 2rem;
+    }
+    .recept {
+        min-height: 150px;
+    }
+    .recept-meta {
+        padding: 1.25rem;
+    }
+    .recept-nazev {
+        font-size: 1.5rem;
+        padding: 1.25rem;
+    }
+}
+
+@media screen and (min-width: 860px) {
+    .doporucujeme {
+        flex-direction: row;
+        flex-wrap: nowrap;
+            }
+    .sloupec {
+        flex-wrap: wrap;
+        flex-basis: calc(1/3*100%);
+    }    
+    .hlavni-recept {
+        min-height: 400px;
+        flex-basis: calc(1/3*100%);
+    }
+    .hlavni-recept .recept-nazev{
+        font-size: 3rem;
+    }
+    .recept {
+        min-height: 200px;
+    }
+    .recept-meta {
+        padding: 1.25rem;
+    }
+    .recept-nazev {
+        font-size: 1.75rem;
+        padding: 1.25rem;
+    }
+}
+ 
 /* -------------------------------------------------- */
 
 /*
